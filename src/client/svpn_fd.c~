@@ -50,7 +50,7 @@ int svpn_sock_create(struct svpn_client *psc,
 	memset(&haddr, 0, sizeof(addr));
 	haddr.sin_family = PF_INET;
 	haddr.sin_addr.s_addr = INADDR_ANY;
-	haddr.sin_port = htons(port);
+	haddr.sin_port = htons(50000);
 
 	psc->server_addr.sin_family = PF_INET;
 //	psc->server_addr.sin6_addr = inet_addr(addr);

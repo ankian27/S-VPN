@@ -44,8 +44,8 @@ int j=0;
                   printf("in while");
 
 fflush(stdout);//}
-//printf(j++);
-//fflush(stdout);
+printf(j++);
+fflush(stdout);
 		FD_ZERO(&fd_list);
 		FD_SET(psc->tun_fd, &fd_list);
 		FD_SET(psc->sock_fd, &fd_list);
