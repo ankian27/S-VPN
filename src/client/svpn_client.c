@@ -40,12 +40,7 @@ int j=0;
 //	tv.tv_sec = 0;
 //	tv.tv_usec = 0;
 	while(1) {
-         //       for (;;){
-//                  printf("in while");
-
-//fflush(stdout);//}
-//printf(j++);
-//fflush(stdout);
+        
 		FD_ZERO(&fd_list);
 		FD_SET(psc->tun_fd, &fd_list);
 		FD_SET(psc->sock_fd, &fd_list);
