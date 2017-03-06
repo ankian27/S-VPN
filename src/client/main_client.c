@@ -39,10 +39,10 @@ int main(int argc, char **argv) {
 	sprintf(buffer, "ifconfig %s mtu 1400", "tun0");
 	system(buffer);
 
-	printf("slslslslclient start\n");
-fflush(stdout);
-        printf("hahahah");
-fflush(stdout);
+	printf("client start\n");
+//fflush(stdout);
+  //      printf("hahahah");
+//fflush(stdout);
 	svpn_handle_thread(psc);
 
 	return 0;

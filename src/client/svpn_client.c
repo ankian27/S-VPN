@@ -41,9 +41,9 @@ int j=0;
 //	tv.tv_usec = 0;
 	while(1) {
          //       for (;;){
-                  printf("in while");
+//                  printf("in while");
 
-fflush(stdout);//}
+//fflush(stdout);//}
 //printf(j++);
 //fflush(stdout);
 		FD_ZERO(&fd_list);
@@ -68,7 +68,7 @@ fflush(stdout);//}
 //			printf("send : %d total:%d\n", len, sendc);
 
 			Encrypt(&(psc->table), tmp_buffer, buffer, len);
-
+                   //memcpy(buffer,tmp_buffer,len);
 //			len = sendto(psc->sock_fd, buffer, len, 0,
 //`					(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 
@@ -95,7 +95,7 @@ fflush(stdout);//}
 //			printf("recv : %d total:%d\n", len, recvc);
 
 			Decrypt(&(psc->table), tmp_buffer, buffer, len);
-
+                        //memcpy(buffer,tmp_buffer,len);
 			if (buffer[0] >> 4 != 4)
 				continue;
 
