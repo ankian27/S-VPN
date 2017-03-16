@@ -5,6 +5,10 @@ src/lib/CMakeFiles/svpn.dir/crypt.c.o
  ../include/crypt.h
  ../include/md5.h
  /home/ankit/git_repo/S-VPN/src/lib/crypt.c
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o
+ ../include/crypt.h
+ ../include/md5.h
+ /home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c
 src/lib/CMakeFiles/svpn.dir/md5.c.o
  ../include/md5.h
  /home/ankit/git_repo/S-VPN/src/lib/md5.c

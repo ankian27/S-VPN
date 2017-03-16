@@ -49,9 +49,32 @@ include src/lib/CMakeFiles/svpn.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/lib/CMakeFiles/svpn.dir/flags.make
 
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o: src/lib/CMakeFiles/svpn.dir/flags.make
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o: ../src/lib/crypt.orig.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o"
+	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/svpn.dir/crypt.orig.c.o   -c /home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c
+
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/svpn.dir/crypt.orig.c.i"
+	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c > CMakeFiles/svpn.dir/crypt.orig.c.i
+
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/svpn.dir/crypt.orig.c.s"
+	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c -o CMakeFiles/svpn.dir/crypt.orig.c.s
+
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.requires:
+.PHONY : src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.requires
+
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.provides: src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.requires
+	$(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.provides.build
+.PHONY : src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.provides
+
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.provides.build: src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o
+
 src/lib/CMakeFiles/svpn.dir/util.c.o: src/lib/CMakeFiles/svpn.dir/flags.make
 src/lib/CMakeFiles/svpn.dir/util.c.o: ../src/lib/util.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/lib/CMakeFiles/svpn.dir/util.c.o"
 	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/svpn.dir/util.c.o   -c /home/ankit/git_repo/S-VPN/src/lib/util.c
 
@@ -74,7 +97,7 @@ src/lib/CMakeFiles/svpn.dir/util.c.o.provides.build: src/lib/CMakeFiles/svpn.dir
 
 src/lib/CMakeFiles/svpn.dir/md5.c.o: src/lib/CMakeFiles/svpn.dir/flags.make
 src/lib/CMakeFiles/svpn.dir/md5.c.o: ../src/lib/md5.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/lib/CMakeFiles/svpn.dir/md5.c.o"
 	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/svpn.dir/md5.c.o   -c /home/ankit/git_repo/S-VPN/src/lib/md5.c
 
@@ -97,7 +120,7 @@ src/lib/CMakeFiles/svpn.dir/md5.c.o.provides.build: src/lib/CMakeFiles/svpn.dir/
 
 src/lib/CMakeFiles/svpn.dir/crypt.c.o: src/lib/CMakeFiles/svpn.dir/flags.make
 src/lib/CMakeFiles/svpn.dir/crypt.c.o: ../src/lib/crypt.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankit/git_repo/S-VPN/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/lib/CMakeFiles/svpn.dir/crypt.c.o"
 	cd /home/ankit/git_repo/S-VPN/build/src/lib && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/svpn.dir/crypt.c.o   -c /home/ankit/git_repo/S-VPN/src/lib/crypt.c
 
@@ -120,6 +143,7 @@ src/lib/CMakeFiles/svpn.dir/crypt.c.o.provides.build: src/lib/CMakeFiles/svpn.di
 
 # Object files for target svpn
 svpn_OBJECTS = \
+"CMakeFiles/svpn.dir/crypt.orig.c.o" \
 "CMakeFiles/svpn.dir/util.c.o" \
 "CMakeFiles/svpn.dir/md5.c.o" \
 "CMakeFiles/svpn.dir/crypt.c.o"
@@ -127,6 +151,7 @@ svpn_OBJECTS = \
 # External object files for target svpn
 svpn_EXTERNAL_OBJECTS =
 
+../lib/libsvpn.a: src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o
 ../lib/libsvpn.a: src/lib/CMakeFiles/svpn.dir/util.c.o
 ../lib/libsvpn.a: src/lib/CMakeFiles/svpn.dir/md5.c.o
 ../lib/libsvpn.a: src/lib/CMakeFiles/svpn.dir/crypt.c.o
@@ -140,6 +165,7 @@ svpn_EXTERNAL_OBJECTS =
 src/lib/CMakeFiles/svpn.dir/build: ../lib/libsvpn.a
 .PHONY : src/lib/CMakeFiles/svpn.dir/build
 
+src/lib/CMakeFiles/svpn.dir/requires: src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o.requires
 src/lib/CMakeFiles/svpn.dir/requires: src/lib/CMakeFiles/svpn.dir/util.c.o.requires
 src/lib/CMakeFiles/svpn.dir/requires: src/lib/CMakeFiles/svpn.dir/md5.c.o.requires
 src/lib/CMakeFiles/svpn.dir/requires: src/lib/CMakeFiles/svpn.dir/crypt.c.o.requires

@@ -5,6 +5,10 @@ src/lib/CMakeFiles/svpn.dir/crypt.c.o: ../include/crypt.h
 src/lib/CMakeFiles/svpn.dir/crypt.c.o: ../include/md5.h
 src/lib/CMakeFiles/svpn.dir/crypt.c.o: ../src/lib/crypt.c
 
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o: ../include/crypt.h
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o: ../include/md5.h
+src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o: ../src/lib/crypt.orig.c
+
 src/lib/CMakeFiles/svpn.dir/md5.c.o: ../include/md5.h
 src/lib/CMakeFiles/svpn.dir/md5.c.o: ../src/lib/md5.c
 

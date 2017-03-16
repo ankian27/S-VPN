@@ -16,8 +16,9 @@
 #include "crypt.h"
 #include "svpn_fd.h"
 
-#define BUFFER_LEN	4096
-
+//#define BUFFER_LEN	4096
+#define BUFFER_LEN    8192
+#define ENCRYPT 0
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
 	write(1, buffer, strlen(buffer));
@@ -54,16 +55,24 @@ int j=0;
 
 		if(FD_ISSET(psc->tun_fd, &fd_list)) {
 			len = read(psc->tun_fd, tmp_buffer, BUFFER_LEN);
-			
+			printf("\nlength-%d--\n",len);
 			if (len < 0 || len > BUFFER_LEN)
 				continue;
 
 			sendc += len;
 
 //			printf("send : %d total:%d\n", len, sendc);
-
+                     if(ENCRYPT)
 			Encrypt(&(psc->table), tmp_buffer, buffer, len);
-                   //memcpy(buffer,tmp_buffer,len);
+                     // printf("qwe--%s--\n",buffer);
+                     else
+                        memcpy(buffer,tmp_buffer,len);
+                             int ccc;
+                             for(ccc=0;ccc<len;ccc++) {
+				     printf("%c ",buffer[ccc]);
+				     if (ccc % 16 == 0) printf("\n");
+			     }
+
 //			len = sendto(psc->sock_fd, buffer, len, 0,
 //`					(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 
@@ -88,9 +97,11 @@ int j=0;
 			recvc += len;
 
 //			printf("recv : %d total:%d\n", len, recvc);
-
-			Decrypt(&(psc->table), tmp_buffer, buffer, len);
-                        //memcpy(buffer,tmp_buffer,len);
+                        if(ENCRYPT)  
+			    Decrypt(&(psc->table), tmp_buffer, buffer, len);
+                        else
+                        memcpy(buffer,tmp_buffer,len);
+                        printf("received--%s--\n",buffer);
 			if (buffer[0] >> 4 != 4)
 				continue;
 

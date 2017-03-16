@@ -136,6 +136,30 @@ crypt.c.s:
 	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.c.s
 .PHONY : crypt.c.s
 
+crypt.orig.o: crypt.orig.c.o
+.PHONY : crypt.orig.o
+
+# target to build an object file
+crypt.orig.c.o:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o
+.PHONY : crypt.orig.c.o
+
+crypt.orig.i: crypt.orig.c.i
+.PHONY : crypt.orig.i
+
+# target to preprocess a source file
+crypt.orig.c.i:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.orig.c.i
+.PHONY : crypt.orig.c.i
+
+crypt.orig.s: crypt.orig.c.s
+.PHONY : crypt.orig.s
+
+# target to generate assembly for a file
+crypt.orig.c.s:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.orig.c.s
+.PHONY : crypt.orig.c.s
+
 md5.o: md5.c.o
 .PHONY : md5.o
 
@@ -196,6 +220,9 @@ help:
 	@echo "... crypt.o"
 	@echo "... crypt.i"
 	@echo "... crypt.s"
+	@echo "... crypt.orig.o"
+	@echo "... crypt.orig.i"
+	@echo "... crypt.orig.s"
 	@echo "... md5.o"
 	@echo "... md5.i"
 	@echo "... md5.s"

@@ -5,6 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/ankit/git_repo/S-VPN/src/lib/crypt.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/crypt.c.o"
+  "/home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o"
   "/home/ankit/git_repo/S-VPN/src/lib/md5.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/md5.c.o"
   "/home/ankit/git_repo/S-VPN/src/lib/util.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/util.c.o"
   )

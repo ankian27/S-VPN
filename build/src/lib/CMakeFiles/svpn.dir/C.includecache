@@ -10,29 +10,11 @@
 
 ../include/md5.h
 
-../include/util.h
-
-/home/ankit/git_repo/S-VPN/src/lib/crypt.c
+/home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c
 memory.h
 -
 md5.h
 /home/ankit/git_repo/S-VPN/src/lib/md5.h
 crypt.h
 /home/ankit/git_repo/S-VPN/src/lib/crypt.h
-
-/home/ankit/git_repo/S-VPN/src/lib/md5.c
-memory.h
--
-md5.h
-/home/ankit/git_repo/S-VPN/src/lib/md5.h
-
-/home/ankit/git_repo/S-VPN/src/lib/util.c
-util.h
-/home/ankit/git_repo/S-VPN/src/lib/util.h
-stdio.h
--
-stdlib.h
--
-stdarg.h
--
 
