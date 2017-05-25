@@ -17,6 +17,8 @@ string.h
 -
 unistd.h
 -
+stdint.h
+-
 sys/types.h
 -
 sys/socket.h
@@ -34,6 +36,10 @@ fcntl.h
 sys/stat.h
 -
 sys/select.h
+-
+sys/time.h
+-
+time.h
 -
 svpn_client.h
 /home/ankit/git_repo/S-VPN/src/client/svpn_client.h

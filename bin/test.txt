@@ -1,0 +1,3866 @@
+recv_buf:425984
+client start
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000033
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000186
+elapsed time after printing : 0.000004
+elapsed time after sending : 0.000238
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000173
+elapsed time after printing : 0.000003
+elapsed time after sending : 0.000203
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000008
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000168
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000177
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000013
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000172
+elapsed time after printing : 0.000003
+elapsed time after sending : 0.000191
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000180
+elapsed time after printing : 0.000004
+elapsed time after sending : 0.000271
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000032
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000468
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000029
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000491
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000472
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000197
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000466
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000475
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000455
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000463
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000205
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000462
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000242
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000463
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000468
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000462
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000453
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000468
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000462
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000452
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000028
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000463
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000451
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000205
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000454
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000466
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000452
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000032
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000205
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000461
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000442
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000435
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000438
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000450
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000031
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000433
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000439
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000015
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000193
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000434
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000198
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000432
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000029
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000486
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000452
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000024
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000257
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000481
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000468
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000485
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000470
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000217
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000475
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000204
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000482
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000488
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000493
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000482
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000488
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000482
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000496
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000029
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000501
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000028
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000505
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000212
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000491
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000486
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000494
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000489
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000473
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000491
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000494
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000498
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000481
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000314
+elapsed time after printing : 0.000031
+elapsed time after sending : 0.000470
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000211
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000444
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000442
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000427
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000441
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000430
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000432
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000430
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000006
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000166
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000165
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000009
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000174
+elapsed time after printing : 0.000003
+elapsed time after sending : 0.000221
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000013
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000183
+elapsed time after printing : 0.000004
+elapsed time after sending : 0.000332
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000434
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000440
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000438
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000437
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000198
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000433
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000437
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000195
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000437
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000438
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000435
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000198
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000442
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000205
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000433
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000440
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000006
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000166
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000168
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000011
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000185
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000310
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000027
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000459
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000007
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000170
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000189
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000014
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000191
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000406
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000006
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000168
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000190
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000015
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000190
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000394
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000193
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000440
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000015
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000452
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000165
+elapsed time after printing : 0.000002
+elapsed time after sending : 0.000162
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000008
+ timeout 0 : 99 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000171
+elapsed time after printing : 0.000003
+elapsed time after sending : 0.000211
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000012
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000181
+elapsed time after printing : 0.000004
+elapsed time after sending : 0.000309
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000501
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000505
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000045
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000217
+elapsed time after printing : 0.000008
+elapsed time after sending : 0.000584
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000219
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000557
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000554
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000551
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000225
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000545
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000551
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000554
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000541
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000492
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000545
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000547
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000549
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000211
+elapsed time after printing : 0.000005
+elapsed time after sending : 0.000489
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000483
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000016
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000481
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000037
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000209
+elapsed time after printing : 0.000008
+elapsed time after sending : 0.000560
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000531
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000035
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000218
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000551
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000030
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000272
+elapsed time after printing : 0.000008
+elapsed time after sending : 0.000542
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000535
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000546
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000539
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000199
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000546
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000554
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000223
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000539
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000200
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000555
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000198
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000546
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000034
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000212
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000564
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000211
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000467
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000027
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000275
+elapsed time after printing : 0.000008
+elapsed time after sending : 0.000550
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000527
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000530
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000535
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000529
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000221
+elapsed time after printing : 0.000008
+elapsed time after sending : 0.000530
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000037
+ timeout 0 : 97 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000218
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000534
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000196
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000449
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000017
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000194
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000443
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000029
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000484
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000215
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000522
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000524
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000215
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000523
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000527
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000216
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000522
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000021
+elapsed time after sending : 0.000524
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000201
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000526
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000206
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000522
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000527
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000204
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000524
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000215
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000521
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000027
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000267
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000568
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000542
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000533
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000533
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000210
+elapsed time after printing : 0.000021
+elapsed time after sending : 0.000543
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000529
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000542
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000023
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000210
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000538
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000537
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000520
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000539
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000530
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000022
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000203
+elapsed time after printing : 0.000006
+elapsed time after sending : 0.000526
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000525
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000020
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000208
+elapsed time after printing : 0.000019
+elapsed time after sending : 0.000524
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000042
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000210
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000525
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000019
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000497
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000506
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000034
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000561
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000026
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000205
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000540
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000018
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000207
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000521
+
+length after sendto 102200
+
+-------------------------------------------------
+Then HERE
+
+accumulated time = 0
+elapsed time for buffer iteration 0 : 0.000021
+ timeout 0 : 98 
+length-84--
+
+REACHES HERE!!!!!!!!!!!!!
+HHHHHHHHHH
+Then HERE
+
+idhar se break
+
+tlen = 88
+
+length-102200--
+elapsed time after memcpy tmp_buf to buf : 0.000202
+elapsed time after printing : 0.000007
+elapsed time after sending : 0.000523
+
+length after sendto 102200
+
+-------------------------------------------------

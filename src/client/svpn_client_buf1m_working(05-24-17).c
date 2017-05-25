@@ -116,31 +116,30 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			clock_gettime(CLOCK_REALTIME, &start);
 			acc = 0;
 
-		//while(tlen <= BUFFER_LEN-12){
-		for(bc=1;bc<=60;bc++){
+		while(tlen <= BUFFER_LEN-12){
+			
  	
 			
-				if(acc<=100000000){
-					if(FD_ISSET(psc->tun_fd, &fd_list)) {
+				if(acc<=100){
+					
 					printf("Then HERE\n");
 					fflush(stdout);
-					
-					//clock_gettime(CLOCK_REALTIME, &start);
-					timeout.tv_sec=0;
-					timeout.tv_usec=100;
-					ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
-					if(ret < 0) {
-						if(errno == EINTR)
-							return 0;
- 							//continue;
-						break;
-					}
+					//if(FD_ISSET(psc->tun_fd, &fd_list)) {
+			//clock_gettime(CLOCK_REALTIME, &start);
+				timeout.tv_sec=0;
+			timeout.tv_usec=100;
+			ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
+			if(ret < 0) {
+				if(errno == EINTR)
+					return 0;
+ 					//continue;
+					break;
+			}
 			
-					if(ret==0){
-						printf("\nidhar se break\n");
-						break;
-					}
-					
+			if(ret==0){
+				printf("\nidhar se break\n");
+				break;
+			}
 					len = read(psc->tun_fd, &tmp_buffer[8] + tlen + 4, BUFFER_LEN-tlen-12); //12 because 8 bytes from initial and 4 additional for keeping the length
 					//acc = acc + timeout.tv_usec;
 					printf("\naccumulated time = %ld\n",acc);
@@ -156,15 +155,16 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					
 					uint32_t *lenmemloc=(uint32_t *)&(tmp_buffer[8+tlen]);
 					*lenmemloc=len;
-					tlen=tlen+len+4; 
+					tlen=tlen+len+4;
+ 					//tmp_buffer[ind]=len;
+					//ind=tlen;
+					//break;   
 					printf("\nREACHES HERE!!!!!!!!!!!!!\n");
 					fflush(stdout);
-					//acc = acc + timeout.tv_usec;
-					acc =  1000000000*elapsed;
+					acc = acc + timeout.tv_usec;
 					printf("HHHHHHHHHH\n");
 					fflush(stdout);
-				}
-				//else break;
+				//}
                 }
 					
 				else{

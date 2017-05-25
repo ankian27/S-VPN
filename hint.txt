@@ -1,0 +1,2 @@
+Use the address of the machine, and login using the username "rstallman"
+and the password "mylaptop".
