@@ -117,7 +117,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			acc = 0;
 
 		//while(tlen <= BUFFER_LEN-12){
-		for(bc=1;bc<=60;bc++){
+		for(bc=1;bc<=1;bc++){
  	
 			
 				if(acc<=100000000){
@@ -148,7 +148,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			
 					clock_gettime(CLOCK_REALTIME, &end1);
 					elapsed = diff2float(&start, &end1);
-					printf("elapsed time for buffer iteration %d : %f\n ", bc++, elapsed);
+					printf("elapsed time for buffer iteration %d : %f\n ", bc, elapsed);
 					fflush(stdout);
 					printf("timeout %ld : %ld ",timeout.tv_sec,timeout.tv_usec);
 					fflush(stdout);
