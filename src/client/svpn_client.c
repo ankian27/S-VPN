@@ -97,7 +97,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		FD_SET(psc->tun_fd, &fd_list);
 		FD_SET(psc->sock_fd, &fd_list);
                 timeout.tv_sec=0;
-                timeout.tv_usec=100;
+                timeout.tv_usec=1000;
 		
 		ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
 		if(ret < 0) {
@@ -105,6 +105,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 				return 0;
 			continue;
 		}
+		//printf("Came to line number %d \n", __LINE__);
 
 		if(FD_ISSET(psc->tun_fd, &fd_list)) {
             
@@ -117,34 +118,46 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			acc = 0;
 
 		//while(tlen <= BUFFER_LEN-12){
-		for(bc=1;bc<=1;bc++){
+			printf("Came to line number %d \n", __LINE__);
+			for(bc=1;bc<=60;bc++){
  	
-			
+				printf("Came to line number %d \n", __LINE__);
 				if(acc<=100000000){
-					if(FD_ISSET(psc->tun_fd, &fd_list)) {
-					printf("Then HERE\n");
-					fflush(stdout);
-					
-					//clock_gettime(CLOCK_REALTIME, &start);
+					FD_ZERO(&fd_list);
+					FD_SET(psc->tun_fd, &fd_list);
+					FD_SET(psc->sock_fd, &fd_list);
 					timeout.tv_sec=0;
-					timeout.tv_usec=100;
+					timeout.tv_usec=10;
 					ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
 					if(ret < 0) {
 						if(errno == EINTR)
 							return 0;
- 							//continue;
-						break;
+ 							continue;
+						//break;
 					}
 			
 					if(ret==0){
-						printf("\nidhar se break\n");
-						break;
+						printf("\nselect continue\n");
+						continue;
 					}
 					
+					printf("Then HERE\n");
+					fflush(stdout);
+					printf("Came to line number %d \n", __LINE__);
+					//clock_gettime(CLOCK_REALTIME, &start);
+					
+					
+					if(FD_ISSET(psc->tun_fd, &fd_list)) {
+					printf("Came to line number %d \n", __LINE__);
+					printf("\nJUST BEFORE READ\n")	;
+					
+
 					len = read(psc->tun_fd, &tmp_buffer[8] + tlen + 4, BUFFER_LEN-tlen-12); //12 because 8 bytes from initial and 4 additional for keeping the length
 					//acc = acc + timeout.tv_usec;
 					printf("\naccumulated time = %ld\n",acc);
 					fflush(stdout);
+					}
+					else continue;
 			
 					clock_gettime(CLOCK_REALTIME, &end1);
 					elapsed = diff2float(&start, &end1);
@@ -163,7 +176,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					acc =  1000000000*elapsed;
 					printf("HHHHHHHHHH\n");
 					fflush(stdout);
-				}
+				//}
 				//else break;
                 }
 					
@@ -239,9 +252,10 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			//len = sendto(psc->sock_fd, buffer, len, 0,
 			//	(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 			int sent_len=0,readlen=1400;
+			printf("Came to line number %d \n", __LINE__);
 			while(sent_len<BUFFER_LEN){
 
-
+			printf("Came to line number %d \n", __LINE__);
 			len=sendto(psc->sock_fd, buffer + sent_len , readlen, 0,
 				(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 				if(PRINT){
@@ -261,6 +275,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			//else
 			//	{printf("Error sending msg: %s\n", strerror(errno));}
 		}
+		printf("Came to line number %d \n", __LINE__);
 
 
 			clock_gettime(CLOCK_REALTIME, &end4);
@@ -279,6 +294,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		}
 
 		if(FD_ISSET(psc->sock_fd, &fd_list)) {
+			printf("Came to line number %d \n", __LINE__);
 			len = recvfrom(psc->sock_fd, tmp_buffer, BUFFER_LEN, 0,
 					(struct sockaddr*)&addr, &alen);
 
@@ -293,12 +309,14 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
                         else
                         memcpy(buffer,tmp_buffer,len);
 
-                        printf("received--%s--\n",buffer);
+                        printf("----received----\n");
 			if (buffer[0] >> 4 != 4)
 				continue;
 
 			len = write(psc->tun_fd, buffer, len);
+			printf("Came to line number %d \n", __LINE__);
 		}
+		printf("Came to line number %d \n", __LINE__);
 
 	}
 	return 0;

@@ -91,6 +91,7 @@ int j=0;
          	for(bc=1;bc<=MY_BUFFER_LEN;bc++){
 		//	if(ret==0)
 		//	break;
+         if(FD_ISSET(psc->tun_fd, &fd_list)) {		
 		timeout.tv_sec=0;
                  timeout.tv_usec=100;
 	    	  ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
@@ -101,7 +102,7 @@ int j=0;
                   }
                    if(ret==0)
 			break;
- 	if(FD_ISSET(psc->tun_fd, &fd_list)) {
+ 	
 		//clock_gettime(CLOCK_REALTIME, &start);
 		   len = read(psc->tun_fd, tmp_buffer+tlen+4, BUFFER_LEN);
 		    clock_gettime(CLOCK_REALTIME, &end1);
