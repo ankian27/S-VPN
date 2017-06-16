@@ -56,7 +56,7 @@ int svpn_sock_create(struct svpn_client *psc,
 //	psc->server_addr.sin6_addr = inet_addr(addr);
 	inet_pton(PF_INET, addr, &psc->server_addr.sin_addr);
 	psc->server_addr.sin_port = htons(port);
-	psc->sock_fd = socket(PF_INET, SOCK_DGRAM, 0);
+	psc->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
 	if(psc->sock_fd < 0) {
 		perror("socket");
 		return -1;
@@ -81,10 +81,10 @@ int svpn_sock_create(struct svpn_client *psc,
 	}
 
 	printf("recv_buf:%d\n", n);
-	if(bind(psc->sock_fd, (struct sockaddr*)&haddr, sizeof(haddr)) < 0) {
+	/*if(bind(psc->sock_fd, (struct sockaddr*)&haddr, sizeof(haddr)) < 0) {
 		perror("bind");
 		return -2;
-	}
+	}*/
 	return 0;
 }
 

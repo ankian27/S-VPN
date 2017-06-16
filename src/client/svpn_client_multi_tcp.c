@@ -71,6 +71,7 @@ void pad_buf(char *buff,int len ){
 	}
 }
 //tcp connect call
+connect (psc->sock_fd, (struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 
 int svpn_handle_thread(struct svpn_client* pvoid) {
 	struct svpn_client *psc = pvoid;
@@ -91,11 +92,8 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	maxfd++;
 	int j=0;
 	int maxfd2 = psc->tun_fd + 1;
-	uint32_t *lenmemloc;
 //	tv.tv_sec = 1;
 //	tv.tv_usec = 0;
-	connect (psc->sock_fd, (struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
-
 	while(1) {
         
 		FD_ZERO(&fd_list);
@@ -103,9 +101,8 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		FD_SET(psc->sock_fd, &fd_list);
 		
                 timeout.tv_sec=0;
-                timeout.tv_usec=10;
-		//printf("Came to line number %d \n", __LINE__);
-
+                timeout.tv_usec=1000;
+		
 		ret = select(maxfd, &fd_list, NULL, NULL, &timeout);
 		if(ret < 0) {
 			if(errno == EINTR)
@@ -128,12 +125,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			printf("Came to line number %d \n", __LINE__);
 			for(bc=1;bc<=60;bc++){
  	
-				//printf("Came to line number %d \n", __LINE__);
-				if( acc<=100000000){
+				printf("Came to line number %d \n", __LINE__);
+				if(acc >= 0 && acc<=100000000){
 					FD_ZERO(&fd_list2);
 					FD_SET(psc->tun_fd, &fd_list2);
 					timeout.tv_sec=0;
-					timeout.tv_usec=10;
+					timeout.tv_usec=100;
 					ret = select(maxfd2, &fd_list2, NULL, NULL, &timeout);
 					if(ret < 0) {
 						if(errno == EINTR)
@@ -143,14 +140,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					}
 			
 					if(ret==0){
-						//printf("\nselect continue\n");
-						clock_gettime(CLOCK_REALTIME, &end1);
-						elapsed = diff2float(&start, &end1);
-						acc =  1000000000*elapsed;
-						printf("\naccumulated time = %lld\n",acc);
-						fflush(stdout);
-
-
+						printf("\nselect continue\n");
 						continue;
 					}
 					
@@ -167,7 +157,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 					len = read(psc->tun_fd, &tmp_buffer[8] + tlen + 4, BUFFER_LEN-tlen-12); //12 because 8 bytes from initial and 4 additional for keeping the length
 					//acc = acc + timeout.tv_usec;
-					printf("\naccumulated time = %lld\n",acc);
+					printf("\naccumulated time = %ld\n",acc);
 					fflush(stdout);
 					//}
 					//else continue;
@@ -180,9 +170,9 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					fflush(stdout);
 					printf("\nlength-%d--\n",len);
 					
-					lenmemloc = (uint32_t *)&(tmp_buffer[8+tlen]);
-					*lenmemloc = len;
-					tlen = tlen + len + 4; 
+					uint32_t *lenmemloc=(uint32_t *)&(tmp_buffer[8+tlen]);
+					*lenmemloc=len;
+					tlen=tlen+len+4; 
 					printf("\nREACHES HERE!!!!!!!!!!!!!\n");
 					fflush(stdout);
 					//acc = acc + timeout.tv_usec;
@@ -198,7 +188,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
                 }
 					
 				else{
-					printf("\nacc = %lld\n",acc );
+					printf("\nacc = %ld\n",acc );
 					fflush(stdout);
 					break;
 
@@ -238,7 +228,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 //			printf("send : %d total:%d\n", len, sendc);
  		if(ENCRYPT)
-			Encrypt(&(psc->table), tmp_buffer + 8, buffer + 8, len - 8);
+			Encrypt(&(psc->table), tmp_buffer, buffer, len);
                      // printf("qwe--%s--\n",buffer);
 		else
 			memcpy(buffer,tmp_buffer,len);
@@ -271,10 +261,10 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			signal(SIGPIPE, SIG_IGN);
 			int sent_len=0,readlen=1400;
 			printf("Came to line number %d \n", __LINE__);
-			
 			while(sent_len<BUFFER_LEN){
+
 			printf("Came to line number %d \n", __LINE__);
-			len=send(psc->sock_fd, buffer + sent_len , BUFFER_LEN - sent_len, MSG_NOSIGNAL);
+			len=send(psc->sock_fd, buffer + sent_len , readlen, MSG_NOSIGNAL);
 
 				if(PRINT){
 					int ccc;
@@ -333,7 +323,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			len = write(psc->tun_fd, buffer, len);
 			printf("Came to line number %d \n", __LINE__);
 		}
-		//printf("Came to line number %d \n", __LINE__);
+		printf("Came to line number %d \n", __LINE__);
 
 	}
 	return 0;
