@@ -21,13 +21,11 @@
 //#define MY_BUFFER_LEN 2
 //#define BUFFER_LEN	4096
 #define PRINT 0
-#define BUFFER_LEN    64400//102200
+#define BUFFER_LEN    11200//102200
 #define TIMEOUT_USEC  100
 #define ACC_TIME      10000000
 #define ENCRYPT 0
-#define BUFFSIZE   42
-#define DYN 1
-
+#define BUFFSIZE   6
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
 	write(1, buffer, strlen(buffer));
@@ -94,7 +92,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	struct timespec start, end1, end2, end3, end4;
 	float elapsed;
 	maxfd++;
-	int j=0, dyn_len;
+	int j=0;
 	int maxfd2 = psc->tun_fd + 1;
 	uint32_t *lenmemloc;
 //	tv.tv_sec = 1;
@@ -156,8 +154,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 						fflush(stdout);
 
 
-						//continue;
-						break;
+						continue;
 					}
 					
 					printf("Then HERE\n");
@@ -221,16 +218,10 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		//len=tlen+4;
 		uint32_t *pad= (uint32_t *)&(tmp_buffer[4]);
 		*totallen = tlen;
-
-		if(!DYN)
-			*pad = BUFFER_LEN-tlen;
-		if(DYN){
-			*pad = (acc/100) - tlen;
-		}
-		printf("\ntlen = %d and padlen = %d\n",tlen,*pad);
-		//len=tlen+8;
+		*pad = BUFFER_LEN-tlen;
+		len=tlen+8;
 		//pad_buf(tmp_buffer,len );
-		
+		len=BUFFER_LEN;
 		//memcpy(buffer,tmp_buffer,BUFFER_LEN);
 		//printf("outoutoutout");
 		//fflush(stdout);
@@ -241,13 +232,6 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
                       //ind=tlen;
                        // }
                       //len=tlen;
-		if(DYN){
-			len = 8 + tlen + *pad;
-			dyn_len = len;
-		}
-		if(!DYN)
-			len = BUFFER_LEN;
-		
 		printf("\nlength-%d--\n",len);
 
 		if (len < 0 || len > BUFFER_LEN)
@@ -290,53 +274,28 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			signal(SIGPIPE, SIG_IGN);
 			int sent_len=0,readlen=1400;
 			printf("Came to line number %d \n", __LINE__);
+			
+			while(sent_len<BUFFER_LEN){
+			printf("Came to line number %d \n", __LINE__);
+			len=send(psc->sock_fd, buffer + sent_len , BUFFER_LEN - sent_len, MSG_NOSIGNAL);
 
-			if(!DYN){
-				while(sent_len<BUFFER_LEN){
-				printf("Came to line number %d \n", __LINE__);
-				len=send(psc->sock_fd, buffer + sent_len , BUFFER_LEN - sent_len, MSG_NOSIGNAL);
-
-					if(PRINT){
-						int ccc;
-						for(ccc=0;ccc<len;ccc++) {
-							printf("%c ",buffer[sent_len+ccc]);
-							if (ccc % 28 == 0) printf("\n");
-						}
-						printf("\n\n");
-						fflush(stdout);
+				if(PRINT){
+					int ccc;
+					for(ccc=0;ccc<len;ccc++) {
+						printf("%c ",buffer[sent_len+ccc]);
+						if (ccc % 28 == 0) printf("\n");
 					}
-						
-						sent_len = sent_len + len;
-						//printf("\nmsg sent successfully");
-						//fflush(stdout);
-				
-				//else
-				//	{printf("Error sending msg: %s\n", strerror(errno));}
+					printf("\n\n");
+					fflush(stdout);
 				}
-			}	
-			else{
-				while(sent_len<dyn_len){
-				printf("Came to line number %d \n", __LINE__);
-				len=send(psc->sock_fd, buffer + sent_len , dyn_len - sent_len, MSG_NOSIGNAL);
-
-					if(PRINT){
-						int ccc;
-						for(ccc=0;ccc<len;ccc++) {
-							printf("%c ",buffer[sent_len+ccc]);
-							if (ccc % 28 == 0) printf("\n");
-						}
-						printf("\n\n");
-						fflush(stdout);
-					}
-						
-						sent_len = sent_len + len;
-						//printf("\nmsg sent successfully");
-						//fflush(stdout);
-				
-				//else
-				//	{printf("Error sending msg: %s\n", strerror(errno));}
-				}
-			}
+					
+					sent_len = sent_len + len;
+					//printf("\nmsg sent successfully");
+					//fflush(stdout);
+			
+			//else
+			//	{printf("Error sending msg: %s\n", strerror(errno));}
+		}
 		printf("Came to line number %d \n", __LINE__);
 
 
