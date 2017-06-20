@@ -157,7 +157,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 					len = read(psc->tun_fd, &tmp_buffer[8] + tlen + 4, BUFFER_LEN-tlen-12); //12 because 8 bytes from initial and 4 additional for keeping the length
 					//acc = acc + timeout.tv_usec;
-					printf("\naccumulated time = %ld\n",acc);
+					printf("\naccumulated time = %lld\n",acc);
 					fflush(stdout);
 					//}
 					//else continue;

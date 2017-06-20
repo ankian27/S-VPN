@@ -26,7 +26,7 @@
 #define ACC_TIME      10000000 //nanoseconds
 #define ENCRYPT 0
 #define BUFFSIZE   42
-#define DYN 1
+#define DYN 0
 
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
@@ -138,7 +138,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			for(bc=1;bc<=BUFFSIZE;bc++){
  	
 				//printf("Came to line number %d \n", __LINE__);
-				if(acc<=ACC_TIME){
+				if( acc<=ACC_TIME){
 					FD_ZERO(&fd_list2);
 					FD_SET(psc->tun_fd, &fd_list2);
 					timeout.tv_sec=0;
@@ -159,10 +159,9 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 						printf("\naccumulated time = %lld\n",acc);
 						fflush(stdout);
 
-						if(!DYN)
-							continue;
-						else
-							break;
+
+						//continue;
+						break;
 					}
 					
 					printf("Then HERE\n");
@@ -200,12 +199,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					acc =  1000000000*elapsed;
 					printf("HHHHHHHHHH\n");
 					fflush(stdout);
-					}
-					//breaking from the if FD_ISSET()
-					else 
-						break;
-					//}
-					//else break;
+				}
+				//breaking from the if FD_ISSET()
+				else 
+					break;
+				//}
+				//else break;
                 }
 					
 				else{
@@ -232,9 +231,10 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			*pad = (acc/1000) - tlen;
 		}
 		else
-			*pad = BUFFER_LEN - tlen;
+			*pad = BUFFER_LEN-tlen;
 		//len=tlen+8;
 		//pad_buf(tmp_buffer,len );
+		
 		
 		//memcpy(buffer,tmp_buffer,BUFFER_LEN);
 		//printf("outoutoutout");
@@ -288,7 +288,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 
 //			len = sendto(psc->sock_fd, buffer, len, 0,
-//					(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
+//`					(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
 
 			//len = sendto(psc->sock_fd, buffer, len, 0,
 			//	(struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
@@ -406,7 +406,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 							//len= recvfrom(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0, (struct sockaddr*)&addr, &alen);
 							//if(FD_ISSET(psc->sock_fd, &fd_list)){
 						
-							len = recv(psc->sock_fd, tmp_buffer+rem_offset, pack_len, 0);
+							len = recv(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0);
 						
 							valid_length = valid_length - len;
 							rem_offset   = rem_offset   + len;

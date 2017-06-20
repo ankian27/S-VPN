@@ -23,7 +23,7 @@
 #define PRINT 0
 #define BUFFER_LEN    64400//102200
 #define TIMEOUT_USEC  100
-#define ACC_TIME      10000000 //nanoseconds
+#define ACC_TIME      10000000
 #define ENCRYPT 0
 #define BUFFSIZE   42
 #define DYN 0
@@ -82,12 +82,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	int MY_BUFFER_LEN = 60;
 	struct sockaddr_in addr;
 	socklen_t alen = sizeof(addr);
-	unsigned char buffer[BUFFER_LEN], tmp_buffer[BUFFER_LEN], s_tmp_buffer[BUFFER_LEN], n_tmp_buffer[BUFFER_LEN];
+	unsigned char buffer[BUFFER_LEN], tmp_buffer[BUFFER_LEN];
 	struct timeval timeout;
 	long long acc;
-	fd_set fd_list, fd_list2, fd_list3;
+	fd_set fd_list, fd_list2;
 	int maxfd = (psc->sock_fd > psc->tun_fd) ? psc->sock_fd : psc->tun_fd;
-	int te, ret;
+	int ret;
 	uint32_t len;
 	int recvc = 0, sendc = 0;
 	int seed = time(NULL); /* get current time for seed */
@@ -97,10 +97,6 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	int j=0, dyn_len;
 	int maxfd2 = psc->tun_fd + 1;
 	uint32_t *lenmemloc;
-	int rem_offset, pack_flag, rem_len, valid_length;
-	uint32_t *total_len, *pad_len;
-	int len_buf[MY_BUFFER_LEN];
-
 //	tv.tv_sec = 1;
 //	tv.tv_usec = 0;
 	connect (psc->sock_fd, (struct sockaddr*)&(psc->server_addr), sizeof(psc->server_addr));
@@ -226,15 +222,14 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		uint32_t *pad= (uint32_t *)&(tmp_buffer[4]);
 		*totallen = tlen;
 
-		
-		if(DYN){
-			*pad = (acc/1000) - tlen;
-		}
-		else
+		if(!DYN)
 			*pad = BUFFER_LEN-tlen;
+		if(DYN){
+			*pad = (acc/100) - tlen;
+		}
+		printf("\ntlen = %d and padlen = %d\n",tlen,*pad);
 		//len=tlen+8;
 		//pad_buf(tmp_buffer,len );
-		
 		
 		//memcpy(buffer,tmp_buffer,BUFFER_LEN);
 		//printf("outoutoutout");
@@ -250,9 +245,9 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			len = 8 + tlen + *pad;
 			dyn_len = len;
 		}
-		else
+		if(!DYN)
 			len = BUFFER_LEN;
-
+		
 		printf("\nlength-%d--\n",len);
 
 		if (len < 0 || len > BUFFER_LEN)
@@ -360,138 +355,27 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	
 		}
 
-		memset(s_tmp_buffer,'0', BUFFER_LEN);
-
-
 		if(FD_ISSET(psc->sock_fd, &fd_list)) {
 			printf("Came to line number %d \n", __LINE__);
-			rem_len = BUFFER_LEN;
-			rem_offset=0;
-			pack_flag = 0;
-			while(rem_len > 0){
+			len = recv(psc->sock_fd, tmp_buffer, BUFFER_LEN, 0);
 
-				if(pack_flag == 0)
-					len = recv(psc->sock_fd, tmp_buffer, 8, 0);
-				else
-					len = recv(psc->sock_fd, tmp_buffer, rem_len, 0);
+			if (len < 0 || len > BUFFER_LEN)
+				continue;
 
+			recvc += len;
 
-				if(pack_flag == 0){
-					total_len =   (uint32_t *)&tmp_buffer[0];
-					pad_len   =   (uint32_t *)&tmp_buffer[4];
-					//int valid_length = *total_len + 4;
-					valid_length = *total_len + 8;
+//			printf("recv : %d total:%d\n", len, recvc);
+                        if(ENCRYPT)  
+			    Decrypt(&(psc->table), tmp_buffer, buffer, len);
+                        else
+                        memcpy(buffer,tmp_buffer,len);
 
-					rem_len = *total_len + *pad_len;
-
-					 if(valid_length <= len){
-						//printf("Came to line number %d \n", __LINE__);
-						memcpy(s_tmp_buffer, tmp_buffer + 8, (*total_len));
-						//Processing it now---------------------------------------------------------------
-						//done processing-----------------------------------------------------------------
-						rem_offset  = rem_offset  + len;
-						//++++++++++++++++++++++++++++++change according to pad len
-						rem_len = rem_len - len;
-						//printf("Came to line number %d \n", __LINE__);
-					}
-
-					else{
-						valid_length = valid_length - len;	
-						rem_offset  = rem_offset  + len;
-						//++++++++++++++++++++++++++++++change according to pad len
-						rem_len = rem_len - len;
-						//printf("Came to line number %d \n", __LINE__);
-						
-						while(valid_length > 0){
-							//len= recvfrom(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0, (struct sockaddr*)&addr, &alen);
-							//if(FD_ISSET(psc->sock_fd, &fd_list)){
-						
-							len = recv(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0);
-						
-							valid_length = valid_length - len;
-							rem_offset   = rem_offset   + len;
-							//++++++++++++++++++++++++++++++change according to pad len
-							rem_len = rem_len - len;
-							//printf("Came to line number %d \n", __LINE__);
-						}
-						//memcpy(t_tmp_buffer,tmp_buffer+4,(*total_len));
-						memcpy(s_tmp_buffer,tmp_buffer + 8,(*total_len));
-					}
-
-					pack_flag=1;
-
-					int tlen = 0;
-					int ind = 0;       			                                                				                 				 
-					
-					//Removing the length info from the buffer-------------------------
-					for(te = 0 ; te <= MY_BUFFER_LEN - 1 ; te++){
-						
-						if(s_tmp_buffer[ind]=='0'){
-							break;
-						}
-						uint32_t *c_len  = (uint32_t *) &(s_tmp_buffer[ind]);
-						uint32_t cur_len = *c_len;	
-						memcpy(n_tmp_buffer + tlen, s_tmp_buffer + ind + 4, cur_len);
-						//*c_len=(uint32_t *) &( t_tmp_buffer[ind] );
-						len_buf[te] = *c_len;
-							
-						//DEBUG_PRINT____________________________________________________
-						printf("\n The %d packet length is %d\n  ", te , len_buf[te]);
-						fflush(stdout);
-						//_______________________________________________________________
-										
-						ind = ind + len_buf[te] + 4;
-						tlen = tlen + len_buf[te];
-											 		
-					}
-
-					len = tlen;
-					
-					if (len < 0 || len > BUFFER_LEN)
-						continue;
-
-					recvc += len;
-
-					//printf("recv : %d total:%d\n", len, recvc);
-            		if(ENCRYPT)  
-			    		Decrypt(&(psc->table), tmp_buffer, buffer, len);
-            		else
-                		memcpy(buffer,n_tmp_buffer,len);
-
-            		printf("----received----\n");
-			
-					//if (buffer[0] >> 4 != 4)
-					//	continue;
-					int var, incr=0, ller;
-					
-					for(var = 0; var < te; var++){
-						printf("Came to line number %d \n", __LINE__);
-						ller = write(psc->tun_fd, buffer+incr, len_buf[var]);
-						incr = incr + ller;
-					}
-
-
-
-
-				}
-
-				else{
-					printf("Came to line number %d \n", __LINE__);
-					rem_offset  = rem_offset  + len;
-					//++++++++++++++++++++++++++++++change according to pad len
-					rem_len     = rem_len   - len;
-					continue;
-				}
-			
-			//len = write(psc->tun_fd, buffer, len);
-
-			//printf("Came to line number %d \n", __LINE__);
-			
-			}
-
+                        printf("----received----\n");
 			if (buffer[0] >> 4 != 4)
 				continue;
 
+			len = write(psc->tun_fd, buffer, len);
+			printf("Came to line number %d \n", __LINE__);
 		}
 		//printf("Came to line number %d \n", __LINE__);
 

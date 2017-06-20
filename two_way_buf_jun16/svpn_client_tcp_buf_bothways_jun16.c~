@@ -26,7 +26,7 @@
 #define ACC_TIME      10000000 //nanoseconds
 #define ENCRYPT 0
 #define BUFFSIZE   42
-#define DYN 0
+#define DYN 1
 
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
@@ -226,16 +226,13 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		uint32_t *pad= (uint32_t *)&(tmp_buffer[4]);
 		*totallen = tlen;
 
-		
+		*pad = BUFFER_LEN-tlen;
 		if(DYN){
 			*pad = (acc/1000) - tlen;
 		}
-		else
-			*pad = BUFFER_LEN-tlen;
 		//len=tlen+8;
 		//pad_buf(tmp_buffer,len );
-		
-		
+		len = BUFFER_LEN;
 		//memcpy(buffer,tmp_buffer,BUFFER_LEN);
 		//printf("outoutoutout");
 		//fflush(stdout);
@@ -250,8 +247,6 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			len = 8 + tlen + *pad;
 			dyn_len = len;
 		}
-		else
-			len = BUFFER_LEN;
 
 		printf("\nlength-%d--\n",len);
 
@@ -406,7 +401,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 							//len= recvfrom(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0, (struct sockaddr*)&addr, &alen);
 							//if(FD_ISSET(psc->sock_fd, &fd_list)){
 						
-							len = recv(psc->sock_fd, tmp_buffer+rem_offset, valid_length, 0);
+							len = recv(psc->sock_fd, tmp_buffer+rem_offset, pack_len, 0);
 						
 							valid_length = valid_length - len;
 							rem_offset   = rem_offset   + len;
