@@ -27,6 +27,7 @@
 #define ENCRYPT 0
 #define BUFFSIZE   42
 #define DYN 0
+#define EMPTY 0
 
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
@@ -97,7 +98,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	int j=0, dyn_len;
 	int maxfd2 = psc->tun_fd + 1;
 	uint32_t *lenmemloc;
-	int rem_offset, pack_flag, rem_len, valid_length;
+	int rem_offset, pack_flag, rem_len, valid_length, empty_flag;
 	uint32_t *total_len, *pad_len;
 	int len_buf[MY_BUFFER_LEN];
 
@@ -368,6 +369,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			rem_len = BUFFER_LEN;
 			rem_offset=0;
 			pack_flag = 0;
+			empty_flag=0;
 			while(rem_len > 0){
 
 				if(pack_flag == 0)
@@ -379,10 +381,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 				if(pack_flag == 0){
 					total_len =   (uint32_t *)&tmp_buffer[0];
 					pad_len   =   (uint32_t *)&tmp_buffer[4];
+					if(*total_len==0)
+						empty_flag=1;
 					//int valid_length = *total_len + 4;
 					valid_length = *total_len + 8;
-
-					rem_len = *total_len + *pad_len;
+					if(DYN)
+						rem_len = *total_len + *pad_len;
 
 					 if(valid_length <= len){
 						//printf("Came to line number %d \n", __LINE__);
@@ -423,54 +427,55 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					int tlen = 0;
 					int ind = 0;       			                                                				                 				 
 					
+					if(!empty_flag){
 					//Removing the length info from the buffer-------------------------
-					for(te = 0 ; te <= MY_BUFFER_LEN - 1 ; te++){
-						
-						if(s_tmp_buffer[ind]=='0'){
-							break;
-						}
-						uint32_t *c_len  = (uint32_t *) &(s_tmp_buffer[ind]);
-						uint32_t cur_len = *c_len;	
-						memcpy(n_tmp_buffer + tlen, s_tmp_buffer + ind + 4, cur_len);
-						//*c_len=(uint32_t *) &( t_tmp_buffer[ind] );
-						len_buf[te] = *c_len;
+						for(te = 0 ; te <= MY_BUFFER_LEN - 1 ; te++){
 							
-						//DEBUG_PRINT____________________________________________________
-						printf("\n The %d packet length is %d\n  ", te , len_buf[te]);
-						fflush(stdout);
-						//_______________________________________________________________
-										
-						ind = ind + len_buf[te] + 4;
-						tlen = tlen + len_buf[te];
-											 		
+							if(s_tmp_buffer[ind]=='0'){
+								break;
+							}
+							uint32_t *c_len  = (uint32_t *) &(s_tmp_buffer[ind]);
+							uint32_t cur_len = *c_len;	
+							memcpy(n_tmp_buffer + tlen, s_tmp_buffer + ind + 4, cur_len);
+							//*c_len=(uint32_t *) &( t_tmp_buffer[ind] );
+							len_buf[te] = *c_len;
+								
+							//DEBUG_PRINT____________________________________________________
+							printf("\n The %d packet length is %d\n  ", te , len_buf[te]);
+							fflush(stdout);
+							//_______________________________________________________________
+											
+							ind = ind + len_buf[te] + 4;
+							tlen = tlen + len_buf[te];
+												 		
+						}
+
+						len = tlen;
+						
+						if (len < 0 || len > BUFFER_LEN)
+							continue;
+
+						recvc += len;
+
+						//printf("recv : %d total:%d\n", len, recvc);
+	            		if(ENCRYPT)  
+				    		Decrypt(&(psc->table), tmp_buffer, buffer, len);
+	            		else
+	                		memcpy(buffer,n_tmp_buffer,len);
+
+	            		printf("----received----\n");
+				
+						//if (buffer[0] >> 4 != 4)
+						//	continue;
+						int var, incr=0, ller;
+						
+						for(var = 0; var < te; var++){
+							printf("Came to line number %d \n", __LINE__);
+							ller = write(psc->tun_fd, buffer+incr, len_buf[var]);
+							incr = incr + ller;
+						}
+
 					}
-
-					len = tlen;
-					
-					if (len < 0 || len > BUFFER_LEN)
-						continue;
-
-					recvc += len;
-
-					//printf("recv : %d total:%d\n", len, recvc);
-            		if(ENCRYPT)  
-			    		Decrypt(&(psc->table), tmp_buffer, buffer, len);
-            		else
-                		memcpy(buffer,n_tmp_buffer,len);
-
-            		printf("----received----\n");
-			
-					//if (buffer[0] >> 4 != 4)
-					//	continue;
-					int var, incr=0, ller;
-					
-					for(var = 0; var < te; var++){
-						printf("Came to line number %d \n", __LINE__);
-						ller = write(psc->tun_fd, buffer+incr, len_buf[var]);
-						incr = incr + ller;
-					}
-
-
 
 
 				}
@@ -494,6 +499,21 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 		}
 		//printf("Came to line number %d \n", __LINE__);
+
+		if(!(FD_ISSET(psc->sock_fd, &fd_list)) && !(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY){
+			memset(buffer,'0',BUFFER_LEN );
+			uint32_t *totallen = (uint32_t *)&(buffer[0]);	
+			uint32_t *pad = (uint32_t *)&(buffer[4]);
+			*totallen=0;
+			*pad=BUFFER_LEN-8;
+			int sent=0;
+			while(sent<BUFFER_LEN){
+				len=send(psc->sock_fd, buffer + sent , BUFFER_LEN - sent, MSG_NOSIGNAL);
+
+				sent = sent + len;
+			}
+		}
+
 
 	}
 	return 0;

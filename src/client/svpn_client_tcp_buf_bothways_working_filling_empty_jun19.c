@@ -27,7 +27,7 @@
 #define ENCRYPT 0
 #define BUFFSIZE   42
 #define DYN 0
-#define EMPTY 1
+#define EMPTY 0
 
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
@@ -376,23 +376,20 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					len = recv(psc->sock_fd, tmp_buffer, 8, 0);
 				else
 					len = recv(psc->sock_fd, tmp_buffer, rem_len, 0);
-				printf("Came to line number %d \n", __LINE__);
+
 
 				if(pack_flag == 0){
 					total_len =   (uint32_t *)&tmp_buffer[0];
 					pad_len   =   (uint32_t *)&tmp_buffer[4];
-					if(*total_len==0){
+					if(*total_len==0)
 						empty_flag=1;
-						printf("\nEMPTY FLAG SET\n");
-						fflush(stdout);
-					}
 					//int valid_length = *total_len + 4;
 					valid_length = *total_len + 8;
 					if(DYN)
 						rem_len = *total_len + *pad_len;
 
 					 if(valid_length <= len){
-						printf("Came to line number %d \n", __LINE__);
+						//printf("Came to line number %d \n", __LINE__);
 						memcpy(s_tmp_buffer, tmp_buffer + 8, (*total_len));
 						//Processing it now---------------------------------------------------------------
 						//done processing-----------------------------------------------------------------
@@ -480,30 +477,11 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 
 					}
 
-					else{
-						memset(buffer,'0',BUFFER_LEN );
-						uint32_t *totallen = (uint32_t *)&(buffer[0]);	
-
-						uint32_t *pad = (uint32_t *)&(buffer[4]);
-						*totallen=0;
-						*pad=BUFFER_LEN-8;
-						int sent=0;
-						while(sent<BUFFER_LEN){
-							len=send(psc->sock_fd, buffer + sent , BUFFER_LEN - sent, MSG_NOSIGNAL);
-							printf("\n------sending------\n");
-							fflush(stdout);
-							printf("\nLength Sent = %d\n", len );
-							fflush(stdout);
-							sent = sent + len;
-							}	
-					}
-
 
 				}
 
 				else{
 					printf("Came to line number %d \n", __LINE__);
-					fflush(stdout);
 					rem_offset  = rem_offset  + len;
 					//++++++++++++++++++++++++++++++change according to pad len
 					rem_len     = rem_len   - len;

@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <stdint.h>
+#include <string.h>
+void main(){
+//printf("hahah");
+char buf[6];
+uint32_t *a,*b, len=1600,c;
+//b=&len;
+//memcpy((char *)buf,(char *)b,sizeof(uint32_t));
+//(char *)&buf[0]=(char *)&b;
+
+buf[0]='1';
+buf[1]='2';
+char *i=&buf[2];
+
+i[0]='3';
+i[1]='4';
+i[2]='5';
+i[3]='6';
+//b= (uint32_t *)&buf;
+//*b=1700;
+//char k='a';
+//memcpy(buf+4,&k,1);
+
+//a=(uint32_t *)&buf;
+
+//printf("the number is %d ", *a);
+printf("\n%c",buf[0]);
+printf("\n%c",buf[1]);
+printf("\n%c",buf[2]);
+printf("\n%c",buf[3]);
+printf("\n%c",buf[4]);
+printf("\n%c",buf[5]);
+}
+
+
+if(tmp_buffer[4]=='P' && tmp_buffer[5]='0')
+	continue;
+
+if(tmp_buffer[ind]=='0'){
+	tlen=tlen+len_buf[te];
+	continue;
+}
+
+if((len-(ind+1)) < 6){
+	tlen=tlen+len_buf[te];
+	continue;
+}

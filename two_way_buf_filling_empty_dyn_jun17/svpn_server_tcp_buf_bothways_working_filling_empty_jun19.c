@@ -26,6 +26,7 @@
 #define BUFFSIZE   42
 #define ENCRYPT 0
 #define PRINT 0
+#define EMPTY 0
 
 static void svpn_sig_handler(int sig) {
 	char buffer[] = "Signal?\n";
@@ -196,7 +197,7 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 	fd_set fd_list, fd_list2;
 	uint32_t *lenmemloc;
 	uint32_t *total_len, *pad_len;
-	int rem_offset, pack_flag, pack_len,fd_flag;
+	int rem_offset, pack_flag, pack_len,fd_flag,empty_flag;
 	printf("buff==%s==\n",buffer);
 	printf("tmpbuf==%s==\n",tmp_buffer);
 
@@ -262,6 +263,7 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 			rem_offset=0;
 			clock_gettime(CLOCK_REALTIME, &start);
 			pack_flag=0;
+			empty_flag=0;
 			printf("Came to line number %d \n", __LINE__);
 			while(rem_len > 0){
 						printf("Came to line number %d \n", __LINE__);
@@ -289,8 +291,11 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 							    total_len =   (uint32_t *)&tmp_buffer[0];
 							    pad_len   =   (uint32_t *)&tmp_buffer[4];
 								//int valid_length = *total_len + 4;
+								if(*total_len==0)
+									empty_flag=1;
 								int valid_length = *total_len + 8;
-								rem_len = *total_len + *pad_len;
+								if(DYN)
+									rem_len = *total_len + *pad_len;
 								
 								//if it has read the entire data and maybe some padding------------------------------------------- 
 								if(valid_length <= len){
@@ -356,7 +361,7 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 											 continue;
 											 //endignore-----------------------------------------------------
 											                                                                                                                                        
-											                                                                                                                                         
+										if(!empty_flag){                                                                                                                              
 											 //manually overwriting the tmp_buffer[0] value 
 											 if(ENCRYPT)
 											     uid = t_tmp_buffer[0];
@@ -493,7 +498,7 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 										     printf("\nThe elapsed time after writing : %f \n", elapsed);
 				                             fflush(stdout);
 											 //_______________________________________________________________________________________
-
+										}
 											 
 						}
 						else{
@@ -728,6 +733,20 @@ int svpn_server_handle_thread(struct svpn_server* pvoid)
 		//	output_info();
 		}
 		//printf("Came to line number %d \n", __LINE__);
+
+		if(!(FD_ISSET(conn_fd, &fd_list)) && !(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY){
+			memset(buffer,'0',BUFFER_LEN );
+			uint32_t *totallen = (uint32_t *)&(buffer[0]);	
+			uint32_t *pad = (uint32_t *)&(buffer[4]);
+			*totallen=0;
+			*pad=BUFFER_LEN-8;
+			int sent=0;
+			while(sent<BUFFER_LEN){
+				len=send(conn_fd, buffer + sent , BUFFER_LEN - sent, MSG_NOSIGNAL);
+
+				sent = sent + len;
+			}
+		}
 	}
 	printf("Came to line number %d \n", __LINE__);
 	return 0;
