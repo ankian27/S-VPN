@@ -9,7 +9,7 @@
 #include "minicomp.h"
 
 #define Z_STRENGTH 1
-#define DEBUG 1
+#define MCDEBUG 1
 
 
 /* report a zlib or i/o error */
@@ -107,7 +107,7 @@ int mcdecompress(void *dest, const void *src, size_t len, size_t destlen)
 }
 
 
-int mccompress(void *dest, const void *src, size_t len) {
+int mccompress(void *dest, const void *src, size_t len, size_t destlen) {
 
 	/* declare important zlib variables and init them */
 	int ret = 0;
@@ -130,7 +130,7 @@ int mccompress(void *dest, const void *src, size_t len) {
 	/* set up variables */
 	strm.avail_in = len;
 	strm.next_in = (unsigned char *)src;
-	strm.avail_out = len;
+	strm.avail_out = destlen;
 	strm.next_out = (unsigned char *)dest;
 
 	/* do compression */
@@ -141,9 +141,9 @@ int mccompress(void *dest, const void *src, size_t len) {
 	bytes_processed = len - strm.avail_in;
 
 	/* determine how many bytes of output are ready */
-	bytes_compressed = len - strm.avail_out; 
+	bytes_compressed = destlen - strm.avail_out; 
 
-	if (DEBUG) fprintf(stderr, "Compressed %lu bytes to %d.\n", 
+	if (MCDEBUG) fprintf(stderr, "Compressed %lu bytes to %d.\n", 
 						 (long unsigned)len, bytes_compressed);
 
 	/* sanity check */
@@ -211,7 +211,7 @@ void print_header(const void *src)
 
 }
 
-int minicomp(void *dest, const void *src, size_t len) {
+int minicomp(void *dest, const void *src, size_t len, size_t destlen) {
 
 	int ret;
 	struct mcheader *header = (struct mcheader*) dest;
@@ -225,8 +225,9 @@ int minicomp(void *dest, const void *src, size_t len) {
 	/* use bytecounting algorithm to determine whether to compress */
 	bytecount = bytecounter((char *)src, (unsigned int)len);
 
-	if (Qtype(bytecount) == 0) {
-		if (DEBUG) printf("not compressing; bytecount is %d\n", bytecount);
+	if (Qtype(bytecount) == 0 || len < MINCOMPRESS) {
+		if (MCDEBUG) printf("not compressing; bytecount is %d or len (%lu) is < %d\n", 
+						  bytecount, len, MINCOMPRESS);
 		header->is_compressed = NOTCOMPED; /* we're not compressing */
 		header->csize = len; /* compressed size is unchanged */
 		memcpy(dest_data, src, len);
@@ -234,14 +235,17 @@ int minicomp(void *dest, const void *src, size_t len) {
 
 	} else {
 		
-		if (DEBUG) printf("compressing; bytecount is %d\n", bytecount);
+		if (MCDEBUG) printf("compressing; bytecount is %d\n", bytecount);
 
 		header->is_compressed = COMPED; /* we are compressing! */
-		ret = mccompress(dest_data, src, len); /* do compression */
+		ret = mccompress(dest_data, src, len, destlen); /* do compression */
 		header->csize = ret; /* update compressed size */
 	}
 	
-	if (DEBUG) print_header(header);	
+	if (MCDEBUG) print_header(header);	
+
+
+	ret += sizeof(struct mcheader); /* add the header regardless of compression */
 
 	return ret;
 
@@ -253,9 +257,10 @@ int minidecomp(void *dest, const void *src, size_t len, size_t destlen)
 	int ret;
 	struct mcheader *header = (struct mcheader*) src;
 	const void *src_data = src + sizeof(struct mcheader);
+	int datalen = len - sizeof(struct mcheader);
 
 
-	if (DEBUG) print_header(header);	
+	if (MCDEBUG) print_header(header);	
 
 	if (!is_mcbuffer(src)) {
 		printf("header doesn't match magic!\n");
@@ -263,12 +268,12 @@ int minidecomp(void *dest, const void *src, size_t len, size_t destlen)
 	}
 
 	if (is_compressed(src)) {
-		if (DEBUG) printf("input compressed; decompressing...\n");
+		if (MCDEBUG) printf("input compressed; decompressing...\n");
 		ret = mcdecompress(dest, src_data, len, destlen);
 	} else {
-		if (DEBUG) printf("input not compressed! copying...\n");
-		memcpy(dest, src_data, len);
-		ret = len;
+		if (MCDEBUG) printf("input not compressed! copying...\n");
+		memcpy(dest, src_data, datalen);
+		ret = datalen;
 	}
 
 	return ret;

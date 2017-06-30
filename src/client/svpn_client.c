@@ -240,10 +240,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			if(COMPRESS){
 				clock_gettime(CLOCK_REALTIME, &comp1);
 				printf("Came to line number %d \n", __LINE__);
-				comp_len = minicomp(buffer+8, tmp_buffer+8,tlen);
+				comp_len = minicomp(buffer+8, tmp_buffer+8, tlen, BUFFER_LEN);
 				printf("Came to line number %d \n", __LINE__);
+
 				uint32_t *totallen2 = (uint32_t *)&(buffer[0]);
 				uint32_t *pad2 = (uint32_t *)&(buffer[4]);
+
 				*totallen2 = comp_len;
 				*pad2 = BUFFER_LEN - (comp_len + 8);
 				

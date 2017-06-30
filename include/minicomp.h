@@ -9,6 +9,7 @@
 #define DCMAGIC 0xbadab00fbeefb0b0
 #define COMPED 1
 #define NOTCOMPED 0
+#define MINCOMPRESS 128 /* don't compress unless the data is at least N bytes long */
 
 struct mcheader {
 	unsigned long magic;
@@ -21,7 +22,7 @@ struct mcheader {
 void zerr(int ret);
 
 /* compress src of len into dest and return new length */
-int minicomp(void *dest, const void *src, size_t len); 
+int minicomp(void *dest, const void *src, size_t len, size_t destlen); 
 
 /* decompress src of len into dest and return new length */
 int minidecomp(void *dest, const void *src, size_t len, size_t destlen);
@@ -34,7 +35,7 @@ void print_header(const void *src); /* print the values of the header to stdout 
 
 /* mostly internal functions but you can use these if you want */
 
-int mccompress(void *dest, const void *src, size_t len); /* do compression */
+int mccompress(void *dest, const void *src, size_t len, size_t destlen); /* do compression */
 int mcdecompress(void *dest, const void *src, size_t len, size_t destlen); /* do compression */
 
 #endif /* MINICOMP_H_ */
