@@ -160,6 +160,30 @@ crypt.orig.c.s:
 	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/crypt.orig.c.s
 .PHONY : crypt.orig.c.s
 
+dc_bytecounter.o: dc_bytecounter.c.o
+.PHONY : dc_bytecounter.o
+
+# target to build an object file
+dc_bytecounter.c.o:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/dc_bytecounter.c.o
+.PHONY : dc_bytecounter.c.o
+
+dc_bytecounter.i: dc_bytecounter.c.i
+.PHONY : dc_bytecounter.i
+
+# target to preprocess a source file
+dc_bytecounter.c.i:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/dc_bytecounter.c.i
+.PHONY : dc_bytecounter.c.i
+
+dc_bytecounter.s: dc_bytecounter.c.s
+.PHONY : dc_bytecounter.s
+
+# target to generate assembly for a file
+dc_bytecounter.c.s:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/dc_bytecounter.c.s
+.PHONY : dc_bytecounter.c.s
+
 md5.o: md5.c.o
 .PHONY : md5.o
 
@@ -183,6 +207,30 @@ md5.s: md5.c.s
 md5.c.s:
 	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/md5.c.s
 .PHONY : md5.c.s
+
+minicomp.o: minicomp.c.o
+.PHONY : minicomp.o
+
+# target to build an object file
+minicomp.c.o:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/minicomp.c.o
+.PHONY : minicomp.c.o
+
+minicomp.i: minicomp.c.i
+.PHONY : minicomp.i
+
+# target to preprocess a source file
+minicomp.c.i:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/minicomp.c.i
+.PHONY : minicomp.c.i
+
+minicomp.s: minicomp.c.s
+.PHONY : minicomp.s
+
+# target to generate assembly for a file
+minicomp.c.s:
+	cd /home/ankit/git_repo/S-VPN/build && $(MAKE) -f src/lib/CMakeFiles/svpn.dir/build.make src/lib/CMakeFiles/svpn.dir/minicomp.c.s
+.PHONY : minicomp.c.s
 
 util.o: util.c.o
 .PHONY : util.o
@@ -223,9 +271,15 @@ help:
 	@echo "... crypt.orig.o"
 	@echo "... crypt.orig.i"
 	@echo "... crypt.orig.s"
+	@echo "... dc_bytecounter.o"
+	@echo "... dc_bytecounter.i"
+	@echo "... dc_bytecounter.s"
 	@echo "... md5.o"
 	@echo "... md5.i"
 	@echo "... md5.s"
+	@echo "... minicomp.o"
+	@echo "... minicomp.i"
+	@echo "... minicomp.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

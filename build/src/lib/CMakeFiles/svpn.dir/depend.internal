@@ -9,9 +9,16 @@ src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o
  ../include/crypt.h
  ../include/md5.h
  /home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c
+src/lib/CMakeFiles/svpn.dir/dc_bytecounter.c.o
+ ../include/dc_bytecounter.h
+ /home/ankit/git_repo/S-VPN/src/lib/dc_bytecounter.c
 src/lib/CMakeFiles/svpn.dir/md5.c.o
  ../include/md5.h
  /home/ankit/git_repo/S-VPN/src/lib/md5.c
+src/lib/CMakeFiles/svpn.dir/minicomp.c.o
+ ../include/dc_bytecounter.h
+ ../include/minicomp.h
+ /home/ankit/git_repo/S-VPN/src/lib/minicomp.c
 src/lib/CMakeFiles/svpn.dir/util.c.o
  ../include/util.h
  /home/ankit/git_repo/S-VPN/src/lib/util.c

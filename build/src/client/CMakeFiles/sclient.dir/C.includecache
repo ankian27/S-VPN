@@ -8,6 +8,38 @@
 
 ../include/crypt.h
 
+../include/dc_bytecounter.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+assert.h
+-
+time.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdint.h
+-
+
+../include/minicomp.h
+stdio.h
+-
+stdlib.h
+-
+zlib.h
+-
+dc_bytecounter.h
+../include/dc_bytecounter.h
+
 /home/ankit/git_repo/S-VPN/src/client/svpn_client.c
 stdio.h
 -
@@ -47,6 +79,8 @@ crypt.h
 /home/ankit/git_repo/S-VPN/src/client/crypt.h
 svpn_fd.h
 /home/ankit/git_repo/S-VPN/src/client/svpn_fd.h
+minicomp.h
+/home/ankit/git_repo/S-VPN/src/client/minicomp.h
 
 /home/ankit/git_repo/S-VPN/src/client/svpn_client.h
 pthread.h

@@ -6,7 +6,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/ankit/git_repo/S-VPN/src/lib/crypt.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/crypt.c.o"
   "/home/ankit/git_repo/S-VPN/src/lib/crypt.orig.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/crypt.orig.c.o"
+  "/home/ankit/git_repo/S-VPN/src/lib/dc_bytecounter.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/dc_bytecounter.c.o"
   "/home/ankit/git_repo/S-VPN/src/lib/md5.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/md5.c.o"
+  "/home/ankit/git_repo/S-VPN/src/lib/minicomp.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/minicomp.c.o"
   "/home/ankit/git_repo/S-VPN/src/lib/util.c" "/home/ankit/git_repo/S-VPN/build/src/lib/CMakeFiles/svpn.dir/util.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")

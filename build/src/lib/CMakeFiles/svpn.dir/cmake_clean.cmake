@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/svpn.dir/dc_bytecounter.c.o"
   "CMakeFiles/svpn.dir/crypt.orig.c.o"
+  "CMakeFiles/svpn.dir/minicomp.c.o"
   "CMakeFiles/svpn.dir/util.c.o"
   "CMakeFiles/svpn.dir/md5.c.o"
   "CMakeFiles/svpn.dir/crypt.c.o"

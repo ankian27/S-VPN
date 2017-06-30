@@ -7,6 +7,8 @@ src/client/CMakeFiles/sclient.dir/main_client.c.o: ../src/client/main_client.c
 src/client/CMakeFiles/sclient.dir/main_client.c.o: ../src/client/svpn_client.h
 
 src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../include/crypt.h
+src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../include/dc_bytecounter.h
+src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../include/minicomp.h
 src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../src/client/svpn_client.c
 src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../src/client/svpn_client.h
 src/client/CMakeFiles/sclient.dir/svpn_client.c.o: ../src/client/svpn_fd.h

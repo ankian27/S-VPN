@@ -1,2 +1,2 @@
-/usr/bin/ar cr ../../../lib/libsvpn.a  CMakeFiles/svpn.dir/crypt.orig.c.o CMakeFiles/svpn.dir/util.c.o CMakeFiles/svpn.dir/md5.c.o CMakeFiles/svpn.dir/crypt.c.o
+/usr/bin/ar cr ../../../lib/libsvpn.a  CMakeFiles/svpn.dir/dc_bytecounter.c.o CMakeFiles/svpn.dir/crypt.orig.c.o CMakeFiles/svpn.dir/minicomp.c.o CMakeFiles/svpn.dir/util.c.o CMakeFiles/svpn.dir/md5.c.o CMakeFiles/svpn.dir/crypt.c.o
 /usr/bin/ranlib ../../../lib/libsvpn.a

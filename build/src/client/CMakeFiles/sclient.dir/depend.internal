@@ -8,6 +8,8 @@ src/client/CMakeFiles/sclient.dir/main_client.c.o
  /home/ankit/git_repo/S-VPN/src/client/svpn_client.h
 src/client/CMakeFiles/sclient.dir/svpn_client.c.o
  ../include/crypt.h
+ ../include/dc_bytecounter.h
+ ../include/minicomp.h
  /home/ankit/git_repo/S-VPN/src/client/svpn_client.c
  /home/ankit/git_repo/S-VPN/src/client/svpn_client.h
  /home/ankit/git_repo/S-VPN/src/client/svpn_fd.h
