@@ -234,7 +234,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			Encrypt(&(psc->table), tmp_buffer + 8, buffer + 8, len - 8);
                     
 		else{
-			if(COMPRESS){
+			if(COMPRESS && tlen >0){
 				//clock_gettime(CLOCK_REALTIME, &comp1);
 				//printf("Came to line number %d \n", __LINE__);
 				comp_len = minicomp(buffer + (main_tlen - tlen) + 8, tmp_buffer + 8, tlen, BUFFER_LEN-(main_tlen - tlen + 8));
@@ -245,7 +245,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 				*totallen2 = (main_tlen - tlen) + comp_len;
 				*pad2 = BUFFER_LEN - ((main_tlen - tlen) + comp_len + 8);
 			}
-			else
+			else if(tlen > 0)
 				memcpy(buffer,tmp_buffer,len);
 
 			
@@ -380,11 +380,12 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 							//printf("Came to line number %d \n", __LINE__);
 						}
 						if(COMPRESS){
-							int start_offset=0,rem_total_len = *total_len ;
+							int start_offset=0,rem_total_len = *total_len, comp_chunk_size = 0 ;
 							while(rem_total_len>0){
 								memset(s_tmp_buffer,'0', BUFFER_LEN);
 								memset(buffer,'0', BUFFER_LEN);
-								minidecomp(s_tmp_buffer,tmp_buffer + 8 + start_offset, (int)(get_complen(tmp_buffer+8+start_offset))+sizeof(struct mcheader), BUFFER_LEN);
+								comp_chunk_size = (int)(get_complen(tmp_buffer+8+start_offset))+sizeof(struct mcheader);
+								minidecomp(s_tmp_buffer,tmp_buffer + 8 + start_offset, comp_chunk_size, BUFFER_LEN);
 								int tlen = 0, ind = 0;
 								 
 								for(te = 0 ; te <= MY_BUFFER_LEN - 1 ; te++){
@@ -399,7 +400,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 									len_buf[te] = *c_len;
 										
 									//DEBUG_PRINT____________________________________________________
-									printf("\n The %d packet length is %d\n  ", te , len_buf[te]);
+									//printf("\n The %d packet length is %d\n  ", te , len_buf[te]);
 									fflush(stdout);
 									//_______________________________________________________________
 													
@@ -431,8 +432,8 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 									printf("Came to line number %d \n", __LINE__);
 									incr = incr + ller;
 								}
-								start_offset = start_offset + (int)(get_complen(tmp_buffer+8+start_offset))+sizeof(struct mcheader);
-								rem_total_len = rem_total_len - (int)(get_complen(tmp_buffer+8+start_offset))+sizeof(struct mcheader);
+								start_offset = start_offset + comp_chunk_size;
+								rem_total_len = rem_total_len - comp_chunk_size;
 							}
 						}
 						else
@@ -575,7 +576,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			acc_avg = total_acc/n_iter; 
 		}
 		//if(!(FD_ISSET(psc->sock_fd, &fd_list)) && !(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY){
-		if(!(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY){
+		if(!(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY && !(FD_ISSET(psc->sock_fd, &fd_list))){
 			memset(buffer,'0',BUFFER_LEN );
 			uint32_t *totallen = (uint32_t *)&(buffer[0]);	
 			uint32_t *pad = (uint32_t *)&(buffer[4]);
