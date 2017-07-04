@@ -9,7 +9,7 @@
 #include "minicomp.h"
 
 #define Z_STRENGTH 1
-#define MCDEBUG 1
+#define MCDEBUG 0
 
 
 /* report a zlib or i/o error */
