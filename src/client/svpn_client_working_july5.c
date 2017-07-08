@@ -23,8 +23,6 @@
 //#define BUFFER_LEN	4096
 #define PRINT 0
 #define DEBUG_PRINT 0
-#define COMP_PRINT 0
-#define RATE_LIM 0
 #define BUFFER_LEN    63712//64400//102200
 #define TIMEOUT_USEC  100
 #define ACC_TIME      10000000 //nanoseconds
@@ -97,7 +95,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	uint32_t len;
 	int recvc = 0, sendc = 0;
 	int seed = time(NULL); /* get current time for seed */
-	struct timespec start,start1, end1, end2, end3, end4, comp1, comp2,sleep1,sleep2,sleep3,sleep4;
+	struct timespec start, end1, end2, end3, end4, comp1, comp2,sleep1,sleep2;
 	float elapsed;
 	maxfd++;
 	int j=0, dyn_len;
@@ -222,18 +220,16 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 					break;
 				}
 			}
-		//if(DEBUG_PRINT)
+		if(DEBUG_PRINT)
 		printf("\ntlen = %d\n",tlen);
-		//printf("ITERATION = %d\n",i);
-		//fflush(stdout);
+		fflush(stdout);
 			//Adding the total length before the buffer contents
-		if(!COMPRESS){
-			totallen= (uint32_t *)&(tmp_buffer[0]);
-			pad= (uint32_t *)&(tmp_buffer[4]);
-			*totallen = tlen;
-			*pad = BUFFER_LEN-(tlen+8);
-			len = BUFFER_LEN;
-		}
+		
+		totallen= (uint32_t *)&(tmp_buffer[0]);
+		pad= (uint32_t *)&(tmp_buffer[4]);
+		*totallen = tlen;
+		*pad = BUFFER_LEN-(tlen+8);
+		len = BUFFER_LEN;
 		if(DEBUG_PRINT)
 		printf("\nlength-%d--\n",len);
 
@@ -250,30 +246,16 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			if(COMPRESS && tlen >0){
 				//clock_gettime(CLOCK_REALTIME, &comp1);
 				//printf("Came to line number %d \n", __LINE__);
-				clock_gettime(CLOCK_REALTIME, &start1);
 				comp_len = minicomp(buffer + (main_tlen - tlen) + 8, tmp_buffer + 8, tlen, BUFFER_LEN-(main_tlen - tlen + 8));
 				//printf("Came to line number %d \n", __LINE__);
-				clock_gettime(CLOCK_REALTIME, &end3);
-				elapsed = diff2float(&start1, &end3);
-				if(COMP_PRINT){
-					printf("elapsed time for minicomp %f\n ",  elapsed);
-					fflush(stdout);
-				}
+
 				totallen2 = (uint32_t *)&(buffer[0]);
 				pad2 = (uint32_t *)&(buffer[4]);
 				*totallen2 = (main_tlen - tlen) + comp_len;
 				*pad2 = BUFFER_LEN - ((main_tlen - tlen) + comp_len + 8);
 			}
-			else if(tlen > 0){
-				clock_gettime(CLOCK_REALTIME, &start1);
+			else if(tlen > 0)
 				memcpy(buffer,tmp_buffer,len);
-				clock_gettime(CLOCK_REALTIME, &end3);
-				elapsed = diff2float(&start1, &end3);
-				if(COMP_PRINT){
-					printf("elapsed time for memcpy %f\n ",  elapsed);
-					fflush(stdout);
-				}
-			}
 
 			
 		}
@@ -285,7 +267,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	}		
 		//loop yahan tak+_+_+_+__+_+_+_+_+_+_+_+_+_+_+_+__+_+_+_+_+_+_+___+_+_+_+_+_+_+_+_+_+__+_+_+_+_+_+___+_+++_+__+++_+_+___+++_+_+_+_+_+__+_+____+_+_+_+_+_+_+_+_+_
 			//sending data out
-	printf("\nElapsed time after buffering = %f\n",elapsed );
+
 			//clock_gettime(CLOCK_REALTIME, &end2);
 			//elapsed = diff2float(&end1, &end2);
 			//printf("elapsed time after memcpy tmp_buf to buf : %f\n", elapsed);
@@ -303,16 +285,6 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			//elapsed = diff2float(&end2, &end3);
 			signal(SIGPIPE, SIG_IGN);
 			int sent_len=0,readlen=1400;
-			if(RATE_LIM){
-			long long int diff = 100000000 - acc ;
-			if(diff<0)diff=0;
-			printf("\n diff = %lld\n",diff);
-			
-			sleep3.tv_sec = 0;
-			sleep3.tv_nsec = diff;
-			nanosleep(&sleep3,&sleep4);
-				
-			}
 
 			while(sent_len<BUFFER_LEN){
 			if(DEBUG_PRINT)	
@@ -338,8 +310,8 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 		printf("Came to line number %d \n", __LINE__);
 
 
-			//clock_gettime(CLOCK_REALTIME, &end4);
-			//elapsed = diff2float(&end3, &end4);
+			clock_gettime(CLOCK_REALTIME, &end4);
+			elapsed = diff2float(&end3, &end4);
 			if(PRINT){
 				printf("elapsed time after sending : %f\n", elapsed);
 				fflush(stdout);
@@ -405,11 +377,11 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 							//sleep1.tv_nsec=2100000;
 							//nanosleep(&sleep1,&sleep2);
 						}
-						*///else{
-							sleep1.tv_sec=0;
-							sleep1.tv_nsec=acc_avg3;
-							nanosleep(&sleep1,&sleep2);
-						//}
+						else{
+							//sleep1.tv_sec=0;
+							//sleep1.tv_nsec=acc_avg2;
+							//nanosleep(&sleep1,&sleep2);
+						}*/
 					}
 
 					else{
@@ -439,16 +411,9 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 							int start_offset=0,rem_total_len = *total_len, comp_chunk_size = 0 ;
 							while(rem_total_len>0){
 								memset(s_tmp_buffer,'0', BUFFER_LEN);
-								//memset(buffer,'0', BUFFER_LEN);
-								clock_gettime(CLOCK_REALTIME, &start1);
+								memset(buffer,'0', BUFFER_LEN);
 								comp_chunk_size = (int)(get_complen(tmp_buffer+8+start_offset))+sizeof(struct mcheader);
 								minidecomp(s_tmp_buffer,tmp_buffer + 8 + start_offset, comp_chunk_size, BUFFER_LEN);
-								clock_gettime(CLOCK_REALTIME, &end3);
-								elapsed = diff2float(&start1, &end3);
-								if(COMP_PRINT){
-									printf("elapsed time for minidecomp %f\n ",  elapsed);
-									fflush(stdout);
-								}	
 								int tlen = 0, ind = 0;
 								 
 								for(te = 0 ; te <= MY_BUFFER_LEN - 1 ; te++){
@@ -501,16 +466,8 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 								rem_total_len = rem_total_len - comp_chunk_size;
 							}
 						}
-						else{
-							clock_gettime(CLOCK_REALTIME, &start1);
+						else
 							memcpy(s_tmp_buffer,tmp_buffer + 8,(*total_len));
-							clock_gettime(CLOCK_REALTIME, &end3);
-							elapsed = diff2float(&start1, &end3);
-							if(COMP_PRINT){
-								printf("elapsed time for memcpy/d %f\n ",  elapsed);
-								fflush(stdout);
-							}	
-						}
 
 						clock_gettime(CLOCK_REALTIME, &end1);
 						elapsed = diff2float(&start, &end1);
@@ -657,7 +614,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 			acc_avg2 = total_acc2/n_iter;
 			acc_avg3 = total_acc3/n_iter; 
 			if(DEBUG_PRINT)
-			printf("\nAVG_ACC2 = %lld\n",acc_avg2);
+			printf("\nAVG_ACC = %lld\n",acc_avg);
 			fflush(stdout);
 		}
 		//if(!(FD_ISSET(psc->sock_fd, &fd_list)) && !(FD_ISSET(psc->tun_fd, &fd_list)) && EMPTY){
@@ -686,11 +643,11 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 				//sleep1.tv_nsec=2100000;
 				//nanosleep(&sleep1,&sleep2);
 			}
-			*///else{
-				sleep1.tv_sec=0;
-				sleep1.tv_nsec=acc_avg2;
-				nanosleep(&sleep1,&sleep2);
-			//}
+			else{
+				//sleep1.tv_sec=0;
+				//sleep1.tv_nsec=acc_avg2;
+				//nanosleep(&sleep1,&sleep2);
+			}*/
 
 			while(sent<BUFFER_LEN){
 				if(DEBUG_PRINT)

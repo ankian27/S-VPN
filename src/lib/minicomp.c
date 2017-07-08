@@ -6,12 +6,35 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <zlib.h>
+#include <sys/time.h>
+#include <time.h>
 #include "minicomp.h"
 
 #define Z_STRENGTH 1
 #define MCDEBUG 0
+#define PRINT_TIME 1
 
+struct timespec start,end, start1,end1;
+float elapsed;
 
+float diff3float(struct timespec *start, struct timespec *end)
+{
+	float f;
+
+	struct timespec temp;
+
+	if ((end->tv_nsec - start->tv_nsec)<0) {
+		temp.tv_sec = end->tv_sec - start->tv_sec-1;
+		temp.tv_nsec = 1000000000 + end->tv_nsec - start->tv_nsec;
+	} else {
+		temp.tv_sec = end->tv_sec - start->tv_sec;
+		temp.tv_nsec = end->tv_nsec - start->tv_nsec;
+	}
+
+	f = temp.tv_sec + (temp.tv_nsec / 1000000000.0);
+
+	return f;
+}
 /* report a zlib or i/o error */
 void zerr(int ret)
 {
@@ -97,11 +120,11 @@ int mcdecompress(void *dest, const void *src, size_t len, size_t destlen)
 	*/
 
 	inflateEnd(&strm);
-
-	printf("consumed %lu and produced %u bytes...\n", 
-						 len,
-						 free_space - strm.avail_out);
-
+	if(MCDEBUG){
+		printf("consumed %lu and produced %u bytes...\n", 
+							 len,
+							 free_space - strm.avail_out);
+	}
 	return free_space - strm.avail_out;
 
 }
@@ -223,8 +246,18 @@ int minicomp(void *dest, const void *src, size_t len, size_t destlen) {
 	header->ucsize = len;
 
 	/* use bytecounting algorithm to determine whether to compress */
-	bytecount = bytecounter((char *)src, (unsigned int)len);
+	 clock_gettime(CLOCK_REALTIME, &start);
+	 bytecount = bytecounter((char *)src, (unsigned int)len);
+	 clock_gettime(CLOCK_REALTIME, &end);
+	 elapsed = diff3float(&start, &end);
+	 if(PRINT_TIME)
+	    printf("\ntime for bytecounting = %f\n",elapsed);
 
+	
+
+	
+	//bytecount=0;
+	clock_gettime(CLOCK_REALTIME, &start1);
 	if (Qtype(bytecount) == 0 || len < MINCOMPRESS) {
 		if (MCDEBUG) printf("not compressing; bytecount is %d or len (%lu) is < %d\n", 
 						  bytecount, len, MINCOMPRESS);
@@ -241,6 +274,11 @@ int minicomp(void *dest, const void *src, size_t len, size_t destlen) {
 		ret = mccompress(dest_data, src, len, destlen); /* do compression */
 		header->csize = ret; /* update compressed size */
 	}
+
+	clock_gettime(CLOCK_REALTIME, &end1);
+	elapsed = diff3float(&start1, &end1);
+	if(PRINT_TIME)
+	   printf("\ntime for compressing = %f\n",elapsed);
 	
 	if (MCDEBUG) print_header(header);	
 

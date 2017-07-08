@@ -223,7 +223,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 				}
 			}
 		//if(DEBUG_PRINT)
-		printf("\ntlen = %d\n",tlen);
+		//printf("\ntlen = %d\n",tlen);
 		//printf("ITERATION = %d\n",i);
 		//fflush(stdout);
 			//Adding the total length before the buffer contents
@@ -285,7 +285,7 @@ int svpn_handle_thread(struct svpn_client* pvoid) {
 	}		
 		//loop yahan tak+_+_+_+__+_+_+_+_+_+_+_+_+_+_+_+__+_+_+_+_+_+_+___+_+_+_+_+_+_+_+_+_+__+_+_+_+_+_+___+_+++_+__+++_+_+___+++_+_+_+_+_+__+_+____+_+_+_+_+_+_+_+_+_
 			//sending data out
-	printf("\nElapsed time after buffering = %f\n",elapsed );
+	//printf("\nElapsed time after buffering = %f\n",elapsed );
 			//clock_gettime(CLOCK_REALTIME, &end2);
 			//elapsed = diff2float(&end1, &end2);
 			//printf("elapsed time after memcpy tmp_buf to buf : %f\n", elapsed);

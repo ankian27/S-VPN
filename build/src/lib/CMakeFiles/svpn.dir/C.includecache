@@ -55,6 +55,10 @@ sys/types.h
 -
 zlib.h
 -
+sys/time.h
+-
+time.h
+-
 minicomp.h
 /home/ankit/git_repo/S-VPN/src/lib/minicomp.h
 
